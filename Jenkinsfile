@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-        stage('Build') {git
+        stage('Build') {
             steps {
                 echo 'Verifying Docker setup'
                 sh 'docker --version'
