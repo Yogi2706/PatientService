@@ -4,7 +4,7 @@ pipeline {
     environment {
         AWS_REGION = 'ap-south-1'
         ECR_REGISTRY = '908228722199.dkr.ecr.ap-south-1.amazonaws.com'
-        ECR_REPOSITORY = 'PatientService'
+        ECR_REPOSITORY = 'patientservice'
         IMAGE_TAG = "${env.BUILD_NUMBER}"
         ECR_IMAGE = "${ECR_REGISTRY}/${ECR_REPOSITORY}:${IMAGE_TAG}"
     }
@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build') {git
             steps {
                 echo 'Verifying Docker setup'
                 sh 'docker --version'
